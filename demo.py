@@ -8,7 +8,7 @@ def greet_user(name):
 
 def unused_function():
     x = 10   # Unused variable (AI should flag this)
-    y = 10  # Unused variable
+    y = 20  # Unused variable
     return
 
 if __name__ == "__main__":
