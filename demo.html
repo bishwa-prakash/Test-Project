@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Security & Style Issues Page</title>
+    <!-- Inline CSS - Heuristic style issue -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #ff0000;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+        form {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Security & Style Issues</h1>
+    <div class="content">
+        <h2>Welcome to the page with issues</h2>
+        <p>This page has both security and style issues. Here are a few examples:</p>
+        
+        <!-- Form input with no sanitization - Heuristic security issue -->
+        <form action="submit_data.php" method="POST">
+            <label for="userInput">Enter something:</label>
+            <input type="text" id="userInput" name="userInput">
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>There are security concerns with this form, as the input is not sanitized before processing.</p>
+
+        <!-- HTTP instead of HTTPS - Heuristic security issue -->
+        <p>For more information, visit the <a href="http://example.com">example.com</a> website.</p>
+
+        <!-- No meta description or proper mobile responsiveness - Heuristic style issue -->
+        <p>This page lacks a meta description and proper mobile responsiveness for modern devices.</p>
+    </div>
+
+    <!-- Deprecated 'center' tag - Heuristic style issue -->
+    <center>
+        <footer>
+            <p>Footer content goes here. This method of centering text is outdated.</p>
+        </footer>
+    </center>
+</body>
+</html>
+
+<script>
+    console.log("This script tag is placed at the end of the body for better performance.");
+</script>
